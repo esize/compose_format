@@ -6,11 +6,11 @@ def readme():
 
 setup(
     name='compose_format',
-    version='1.1.0',
+    version='1.0.0',
     description='format docker-compose files',
     long_description=readme(),
-    url='http://github.com/funkwerk/compose_format',
-    author='Stefan Rohe',
+    url='http://github.com/shukriYusof/compose_format',
+    author='Shukri Yusof',
     license='MIT',
     packages=['compose_format'],
     install_requires=['ruamel.yaml'],
