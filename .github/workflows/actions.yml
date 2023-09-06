@@ -21,7 +21,11 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '${{ matrix.python-version }}'
+      - name: 'Install dependencies'
+        run: |
+          gem install bundler
+          gem update bundler
+          bundle install without development --jobs 4 --retry 3
       - uses: actions/checkout@v2
-      - run: bundle install
       - run: pip install ruamel.yaml flake8 pylint
       - run: rake test
