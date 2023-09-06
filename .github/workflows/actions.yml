@@ -30,6 +30,12 @@ jobs:
           gem install bundler
           gem update bundler
           bundle install --jobs 4 --retry 3
+      - name: 'Rubucop'
+        run: bundle exec rubocop
+      - name: 'Rake'
+        run: bundle exec rake
+      - name: 'Aruba'
+        run: bundle exec aruba
       - name: 'Set up Python ${{ matrix.python-version }}'
         uses: actions/setup-python@v2
         with:
