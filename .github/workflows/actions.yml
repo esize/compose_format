@@ -13,9 +13,8 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - windows-latest
     steps:
-    - name: Check out code
-      uses: actions/checkout@v3
-    - name: Build docker images
-      run: docker build -t local/image .
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Build docker images
+        run: docker build -t local/image .
