@@ -1,8 +1,4 @@
-![Build Status](https://github.com/shukriYusof/compose_format/actions/workflows/action.yml/badge.svg)
-[![](https://badge.imagelayers.io/shukriYusof/compose_format.svg)](https://imagelayers.io/?images=shukriYusof/compose_format:latest 'shukriYusof/compose_format')
-[![Docker Build](https://img.shields.io/docker/automated/shukriYusof/compose_format.svg)](https://hub.docker.com/r/shukriYusof/compose_format/)
-[![PyPi version](https://img.shields.io/pypi/v/compose_format.svg)](https://pypi.python.org/pypi/compose_format/)
-[![Docker pulls](https://img.shields.io/docker/pulls/shukkachak/compose_format.svg)](https://hub.docker.com/r/shukriYusof/compose_format/)
+[![Github Actions](https://github.com/shukriYusof/compose_format/actions/workflows/actions.yml/badge.svg)](https://github.com/shukriYusof/compose_format/actions/workflows/actions.yml)
 
 # compose_format
 
