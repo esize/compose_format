@@ -1,4 +1,4 @@
-[![Github Actions](https://github.com/shukriYusof/compose_format/actions/workflows/actions.yml/badge.svg)](https://github.com/shukriYusof/compose_format/actions/workflows/actions.yml)
+Evan's Fork!
 
 # compose_format
 
@@ -46,11 +46,12 @@ Use it like:
 `cat docker-compose.yml | docker run -i funkwerk/compose_format`
 
 ## Features
- - Support for Version 3, 2.1, 2, and 1.
- - Support for Comments
- - Orders Services, Volumes, Networks
- - Orders Definitions
- - Orders Port and Volume Lists
+
+-   Support for Version 3, 2.1, 2, and 1.
+-   Support for Comments
+-   Orders Services, Volumes, Networks
+-   Orders Definitions
+-   Orders Port and Volume Lists
 
 ## Contribution
 
