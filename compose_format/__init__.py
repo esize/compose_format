@@ -42,12 +42,7 @@ class ComposeFormat:
         'interval', 'timeout', 'retries',
         'disable',
     ]
-    BUILD_ORDER = [
-        'context',
-        'dockerfile',
-        'target',
-        'args'
-    ]
+    BUILD_ORDER = ['context', 'dockerfile', 'args', 'cache_from', 'labels', 'shm_size', 'target']
     ORDERS = {
         'version': TOPLEVEL_ORDER,
         'services': TOPLEVEL_ORDER,
@@ -81,7 +76,7 @@ class ComposeFormat:
 
     def format_string(self, data, replace=False, strict=True):
         data = self.reorder(load(data, RoundTripLoader), strict=strict)
-        formatted = dump(data, Dumper=RoundTripDumper, indent=2, width=120)
+        formatted = dump(data, Dumper=RoundTripDumper, indent=2, block_seq_indent=2, width=120)
 
         return formatted.strip() + '\n'
 
@@ -116,7 +111,7 @@ class ComposeFormat:
         import re
 
         SEXADECIMAL_NUMBER = '(?P<left>\d+):(?P<right>\d+)'
-        match = re.match(SEXADECIMAL_NUMBER, value)
+        match = re.match(SEXADECIMAL_NUMBER, str(value))
         if not match or int(match.group('left')) > 60 or int(match.group('right')) > 60:
             return value
         return SingleQuotedScalarString('{0}:{1}'.format(match.group('left'), match.group('right')))
